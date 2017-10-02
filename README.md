@@ -1,10 +1,15 @@
 # Omok-game-php
 This is a Web Service that communicates with a java client to play the game Omok
-# Instructions
+# Instructions on how to run
+1.) Downlaod the omokClient.jar file.
+2.) Open file.
+3.) Direct server
+4.) Play game
+# Purpose
 The purpose of this assignment is to understand the concepts of web
 scripting languages and have a hands-on experience with web scripting
 by writing small web service code in PHP [1].
-
+# Assignment Requirements
 You are to write a lightweight web service in PHP for playing omok
 games. Omok, meaning "five pieces", is a two-player strategy game
 typically played with go pieces, black and white stones, on a go board
