@@ -1,14 +1,14 @@
 <?php
+include_once '../play/gameBoard.php';
 
 class omokInstance{
-    var $pid, $strategy, $playerxy, $computerxy;
+    var $pid, $strategy, $board;
 
     function __construct($strategy)
     {
         $this->pid=uniqid();
         $this->strategy=$strategy;
-        $this->computerxy=[];
-        $this->playerxy=[];
+        $this->board = new gameBoard();
     }
 }//end omokInstance class
 

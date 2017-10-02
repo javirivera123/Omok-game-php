@@ -1,30 +1,14 @@
 <?php
-include 'gameCheck.php';
+include_once 'gameCheck.php';
+include_once 'gameBoard.php';
 
-function WSresponse()
-{
-    $game = ["response" => $myJson->response,
-        "ack_move" => [
-            "x" => $_GET['move'],
-            "y" => $_GET['move'],
-            "isWin" => checkWin(),   // winning move?
-            "isDraw" => checkDraw(),  // draw?
-            "row" => []],       // winning row if isWin is true
-        "move" => [
-            "x" => 4,
-            "y" => 6,
-            "isWin" => checkWin(),
-            "isDraw" => checkDraw(),
-            "row" => []]];
-
-}
-
-function checkWin(){
-
-}
-
-function checkDraw(){
-
+if( check($_GET['pid']) ){
+    $game = new gameBoard();
+    $recovered = file_get_contents('../data/'.$_GET['pid'].'.txt');
+    $game = json_decode($recovered,true);
+    $moves = explode(',', $_GET['move']);
+    print_r($moves);
+    //$game->make_a_move($moves[0],$moves[1]);
 }
 
 
