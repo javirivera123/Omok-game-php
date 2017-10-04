@@ -2,7 +2,7 @@
 include_once '../play/gameBoard.php';
 
 class omokInstance{
-    var $pid, $strategy, $board;
+    var $pid, $strategy, $board, $playerMoves, $computerMoves;
 
     function __construct($strategy)
     {
